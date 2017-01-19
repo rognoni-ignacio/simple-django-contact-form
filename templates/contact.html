@@ -5,11 +5,10 @@
 {% block content %}
     <div class="container row">
         <div class="col-md-12">
-            <div class="headline"><h3>Send us a message!</h3></div>
-            <p>If you had any question, suggestion or want to help us develop a better app, please contact us!.</p>
+            <div><h3>Send a message!</h3></div>
+            <p>If you had any question, suggestion or want to help me develop a better "Contact Form", please contact me!</p>
             <form action="{% url 'contact' %}" method="post" class="form-horizontal">
                 {% csrf_token %}
-
                 <div id="contact_name"
                      class="form-group {% if contact_form.name.errors %}has-error{% endif %}">
                     <label for="contact_name "
@@ -18,7 +17,6 @@
                         {{ contact_form.name|addcss:"form-control" }}
                     </div>
                 </div>
-
                 <div id="contact_email"
                      class="form-group {% if contact_form.email.errors %}has-error{% endif %}">
                     <label for="contact_email "
@@ -27,7 +25,6 @@
                         {{ contact_form.email | addcss:"form-control" }}
                     </div>
                 </div>
-
                 <div id="contact_message"
                      class="form-group {% if contact_form.message.errors %}has-error{% endif %}">
                     <label for="contact_message "
@@ -42,7 +39,6 @@
                         <input type="submit" class="btn btn-info pull-right" value="Send">
                     </div>
                 </div>
-
                 {% if result_message %}
                     <div class="message">
                         <i class="rounded-x fa fa-check"></i>

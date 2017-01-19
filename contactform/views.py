@@ -24,7 +24,7 @@ class ContactView(View):
             sender = contact_form.cleaned_data['email']
             message = contact_form.cleaned_data['message']
 
-            email_subject = 'New message from the Contact Form!'
+            email_subject = 'New message from the Contact Form app!'
             email_body = name + ' (email: ' + sender + ') send us this message: \n\n' + message
 
             mail = EmailMessage(email_subject,
